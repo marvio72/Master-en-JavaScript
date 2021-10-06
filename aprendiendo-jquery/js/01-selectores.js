@@ -13,4 +13,15 @@ $(document).ready(function () {
     console.log('Click dado!!');
     $(this).addClass('zebra');
   });
+
+  // Selectores de etiquetas
+  let parrafos = $('p').css('cursor', 'pointer');
+  parrafos.click(function () {
+    let that = $(this);
+    if (!that.hasClass('grande')) {
+      that.addClass('grande');
+    } else {
+      that.removeClass('grande');
+    }
+  });
 });
