@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,GAAG;CACZ;;AAED,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,eAAe;EACvB,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,QAAQ;CAKrB",
+    "sources": [
+        "../aprendiendo-jquery/sass/eventos.scss"
+    ],
+    "names": [],
+    "file": "eventos.css"
+}

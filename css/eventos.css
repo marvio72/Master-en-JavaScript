@@ -1,0 +1,13 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+#caja {
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+  background: yellow;
+  transition: 30ms all;
+}
+/*# sourceMappingURL=eventos.css.map */
