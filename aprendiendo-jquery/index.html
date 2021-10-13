@@ -14,6 +14,13 @@
       .grande {
         font-size: 30px;
       }
+      .margen-superior {
+        display: block;
+        margin-top: 45px;
+      }
+      .resaltado {
+        border-bottom: 2px solid green;
+      }
     </style>
   </head>
   <body>
@@ -26,5 +33,15 @@
     <p id="amarillo" class="zebra">Practicando con selectores</p>
     <p id="verde" class="sin_borde">Quiero ser un parrafo verde</p>
     <p class="zebra">Parrafo en blanco</p>
+
+    <div id="caja">
+      <p>Hola soy una caja
+        <ul>
+          <li>Elemento 1</li>
+          <li class="resaltado">Elemento 2</li>
+        </ul>
+      </p>
+      <span class="resaltado">Resaltado</span>
+    </div>
   </body>
 </html>

@@ -28,4 +28,16 @@ $(document).ready(function () {
   // Selectores de atributos
   $('[title="Google"]').css('background', '#ccc');
   $('[title="Facebook"]').css('background', 'blue');
+
+  // Otros
+  // $('p, a').addClass('margen-superior');
+
+  let busqueda = $('#caja')
+    .find('.resaltado')
+    .eq(0)
+    .parent()
+    .parent()
+    .parent()
+    .find('[title="Google"]');
+  console.log(busqueda);
 });
