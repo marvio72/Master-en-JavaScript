@@ -10,4 +10,19 @@
   background: yellow;
   transition: 30ms all;
 }
+
+input {
+  padding: 20px;
+  width: 300px;
+  font-size: 20px;
+}
+
+#datos {
+  width: 250px;
+  border: 2px dashed black;
+  margin-top: 10px;
+  height: 50px;
+  padding: 10px;
+  display: none;
+}
 /*# sourceMappingURL=eventos.css.map */
