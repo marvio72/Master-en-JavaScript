@@ -18,5 +18,15 @@ $(document).ready(function () {
     $(this).css('background', 'green');
   }
 
+  // Hover
   caja.hover(cambiaRojo, cambiaVerde);
+
+  // Click, doble Click
+  caja.click(function () {
+    $(this).css('background', 'blue').css('color', 'white');
+  });
+
+  caja.dblclick(function () {
+    $(this).css('background', 'pink').css('color', 'black');
+  });
 });
