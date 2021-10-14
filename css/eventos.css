@@ -25,4 +25,15 @@ input {
   padding: 10px;
   display: none;
 }
+
+#sigueme {
+  width: 25px;
+  height: 25px;
+  background: yellow;
+  position: absolute;
+  display: block;
+  opacity: 0.5;
+  border-radius: 999px;
+  border: 2px solid black;
+}
 /*# sourceMappingURL=eventos.css.map */
