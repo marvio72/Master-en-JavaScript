@@ -14,7 +14,9 @@ $(document).ready(function () {
     $(this).hide();
     $('#mostrar').show();
     // $('#caja').hide('slow');
-    caja.fadeTo('slow', 0);
+    caja.slideUp('slow', function () {
+      console.log('Modulo ocultado'); //Se muestra el dialogo hasta que termina de ejecutar el efecto
+    });
   });
 
   $('#todoenuno').click(function () {
