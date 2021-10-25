@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,GAAG;CACZ;;AAED,AAAA,EAAE,CAAC;EACD,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,IAAI;CACjB;;AAED,AAAA,SAAS,CAAC;EACR,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,eAAe;EACvB,UAAU,EAAE,SAAS;EACrB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "../aprendiendo-jquery/sass/interface.scss"
+    ],
+    "names": [],
+    "file": "interface.css"
+}
