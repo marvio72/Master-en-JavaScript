@@ -15,4 +15,27 @@ $(document).ready(function () {
       $('#datos').append('<p>' + element.first_name + ' ' + element.last_name + '</p>');
     });
   });
+
+  let usuario = {
+    name: 'Marco Ruvalcaba',
+    web: 'mruvalcaba.com',
+  };
+  $.post('https://reqres.in/api/users', usuario, function (response) {
+    console.log(response);
+  });
+
+  $('#formulario').submit(function (e) {
+    e.preventDefault();
+    let usuario = {
+      name: $('input[name="nombre"]').val(),
+      web: $('input[name="web"]').val(),
+    };
+    console.log(usuario);
+    $.post($(this).attr('action'), usuario, function (response) {
+      console.log(response);
+    }).done(function () {
+      alert('Usuario añadido correctamente');
+    });
+    return false;
+  });
 });
