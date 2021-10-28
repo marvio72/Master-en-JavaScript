@@ -41,4 +41,9 @@ $(document).ready(function () {
 
   // Tooltips
   $(document).tooltip();
+
+  // Cuadro de dialogo
+  $('#lanzar-popup').click(function () {
+    $('#popup').dialog();
+  });
 });
