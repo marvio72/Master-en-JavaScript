@@ -16,4 +16,21 @@ h1 {
   margin: 20px;
   float: left;
 }
+
+.lista-seleccionable li {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  list-style: none;
+  cursor: pointer;
+}
+
+.lista-seleccionable .ui-selecting {
+  background: green;
+}
+
+.lista-seleccionable .ui-selected {
+  background: blue;
+  color: white;
+}
 /*# sourceMappingURL=interface.css.map */
