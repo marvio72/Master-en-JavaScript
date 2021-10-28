@@ -25,4 +25,17 @@ $(document).ready(function () {
       console.log('Haz soltado algo dentro');
     },
   });
+
+  // Efectos
+  $('#mostrar').click(function () {
+    // $('.caja-efectos').toggle('face');
+    // $('.caja-efectos').toggle('explode');
+    // $('.caja-efectos').toggle('blind');
+    // $('.caja-efectos').toggle('slide');
+    // $('.caja-efectos').toggle('drop');
+    // $('.caja-efectos').toggle('fold');
+    // $('.caja-efectos').toggle('puff');
+    // $('.caja-efectos').toggle('scale');
+    $('.caja-efectos').toggle('shake', 4300);
+  });
 });
