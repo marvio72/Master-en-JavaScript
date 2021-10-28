@@ -38,4 +38,7 @@ $(document).ready(function () {
     // $('.caja-efectos').toggle('scale');
     $('.caja-efectos').toggle('shake', 4300);
   });
+
+  // Tooltips
+  $(document).tooltip();
 });
