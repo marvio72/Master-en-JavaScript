@@ -6,5 +6,15 @@ $(document).ready(function () {
   $('.elemento').resizable();
 
   // Seleccionar Elementos
-  $('.lista-seleccionable').selectable();
+  // $('.lista-seleccionable').selectable();
+
+  // Ordenar Elementos
+  /*
+  Para usar esta función es necesario desactivar .selectable();
+  */
+  $('.lista-seleccionable').sortable({
+    update: function (event, ui) {
+      console.log('ha cambiado la lista');
+    },
+  });
 });
