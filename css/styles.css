@@ -174,4 +174,9 @@ footer {
   margin-top: 40px;
   line-height: 47px;
 }
+
+.bx-wrapper,
+.bx-viewport {
+  height: 250px !important;
+}
 /*# sourceMappingURL=styles.css.map */
