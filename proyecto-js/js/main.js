@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  // Cargar localstorage
+  let inicio = sessionStorage.getItem('color');
+  $('#theme').attr(sessionStorage.getItem('color'));
+
   // Slider
   $('.bxslider').bxSlider({
     mode: 'fade',
@@ -83,5 +87,23 @@ $(document).ready(function () {
      </article>
      `;
     $('#posts').append(post);
+  });
+
+  // Selector de tema
+  let theme = $('#theme');
+  $('#to-green').click(function () {
+    let green = '/css/green.css';
+    localStorage.setItem('color', green);
+    theme.attr('href', green);
+  });
+  $('#to-red').click(function () {
+    let red = '/css/red.css';
+    localStorage.setItem('color', red);
+    theme.attr('href', red);
+  });
+  $('#to-blue').click(function () {
+    let blue = '/css/blue.css';
+    localStorage.setItem('color', blue);
+    theme.attr('href', blue);
   });
 });

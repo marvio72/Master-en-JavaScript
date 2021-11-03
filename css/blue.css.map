@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,iCAAiC;EAC7C,qBAAqB,EAAE,KAAK;CAC7B;;AAED,AAAA,KAAK,CAAC;EACJ,UAAU,EAAE,OAAO;CACpB;;AAED,AAAA,KAAK,CAAC,EAAE,AAAA,MAAM,CAAC;EACb,UAAU,EAAE,OAAO;CACpB;;AAED,AAAA,YAAY,CAAC;EACX,UAAU,EAAE,OAAO;CACpB",
+    "sources": [
+        "../proyecto-js/sass/blue.scss"
+    ],
+    "names": [],
+    "file": "blue.css"
+}

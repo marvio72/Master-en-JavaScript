@@ -1,0 +1,17 @@
+body {
+  background: url("/proyecto-js/img/rojo.jpg");
+  background-attachment: fixed;
+}
+
+#logo {
+  background: #ca3413;
+}
+
+#menu li:hover {
+  background: #ca3413;
+}
+
+.button-more {
+  background: #ca3413;
+}
+/*# sourceMappingURL=red.css.map */
