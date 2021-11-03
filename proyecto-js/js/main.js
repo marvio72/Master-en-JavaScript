@@ -1,7 +1,11 @@
 $(document).ready(function () {
   // Cargar localstorage
-  let inicio = sessionStorage.getItem('color');
-  $('#theme').attr(sessionStorage.getItem('color'));
+  $('#theme').attr('href', obtenerLocalStorage());
+
+  function obtenerLocalStorage() {
+    let color = localStorage.getItem('color');
+    return color;
+  }
 
   // Slider
   $('.bxslider').bxSlider({
