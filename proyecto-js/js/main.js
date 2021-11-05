@@ -110,4 +110,34 @@ $(document).ready(function () {
     localStorage.setItem('color', blue);
     theme.attr('href', blue);
   });
+
+  // Scroll arriba de la web
+  $('.subir').click(function () {
+    e.preventDefault();
+
+    $('html,body').animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+    return false;
+  });
+
+  // Login Falso
+  $('#login form').submit(function () {
+    let nombre = $('#form_name').val();
+    localStorage.setItem('usuario', nombre);
+  });
+  let usuario = localStorage.getItem('usuario');
+  if (usuario != null && usuario != 'undefined') {
+    let about_parrafo = $('#about p');
+    about_parrafo.html('<br><hr>Bienvenido,<strong>' + ' ' + usuario + '</strong>');
+    about_parrafo.append("<a href='#' id='logout'>Cerrar sesión</a>");
+    $('#login').hide();
+    $('#logout').click(function () {
+      localStorage.removeItem('usuario');
+      location.reload();
+    });
+  }
 });
