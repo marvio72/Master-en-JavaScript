@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto con JavaScript</title>
+    <title>Proyecto con JavaScript_Contact</title>
     <!-- JQuery -->
+
+    <!-- <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.theme.min.css" /> -->
 
     <!-- Estilos CSS -->
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
     <link id="theme" rel="stylesheet" type="text/css" href="/css/red.css" />
-    <!-- Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
   </head>
   <body>
     <div id="selector-theme">
@@ -31,22 +33,43 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="reloj.html">Reloj</a></li>
             <li><a href="about.html">Sobre mi</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="contact.html">Contacto</a></li>
           </ul>
         </navbar>
       </header>
-      <!-- Slider -->
-      <div id="slider">
-        <div class="bxslider">
-          <div><img src="img/hojas.jpg" title="Hojas" /></div>
-          <div><img src="img/rojo.jpg" title="Rojo" /></div>
-          <div><img src="img/cielo.jpg" title="Azul cielo" /></div>
-        </div>
-      </div>
+
       <!-- Contenido -->
       <section id="content">
-        <div id="posts">
-          <!-- Cargar posts desde json -->
+        <div id="box">
+          <!-- Cargar Formulario-->
+          <h2>
+            Contacto
+            <form action="#" method="POST" id="contacto">
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" data-validation="alphanumeric" />
+              <label for="apellidos">Apellidos</label>
+              <input type="text" name="apellidos" data-validation="alphanumeric" />
+              <label for="email">Email</label>
+              <input type="email" name="email" data-validation="email" />
+              <label for="sexo">Sexo</label>
+              <select name="sexo" id="sexo" data-validation="required">
+                <option value="men">Masculino</option>
+                <option value="woman">Femenino</option>
+              </select>
+              <label for="Fecha">Fecha de nacimiento</label>
+              <input
+                type="date"
+                name="date"
+                id="fecha"
+                data-validation="date"
+                data-validation-format="dd-mm-yyyy"
+              />
+
+              <label for="Edad">Edad</label>
+              <input type="number" name="edad" id="edad" min="1" data-validation="number" />
+              <input type="submit" value="Enviar" />
+            </form>
+          </h2>
         </div>
         <aside id="sidebar">
           <div id="about">
@@ -82,8 +105,10 @@
   </body>
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!-- Slider -->
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.13.0/jquery-ui.min.js"></script>
+  <!-- Plugin validacion -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+  <!-- <script src="js/jquery.form-validator.min.js"></script> -->
   <!-- Moment JS -->
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"

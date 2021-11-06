@@ -181,4 +181,25 @@ $(document).ready(function () {
     });
     $('#acordeon').accordion();
   }
+
+  // Reloj
+  if (window.location.href.indexOf('reloj') > -1) {
+    setInterval(() => {
+      let reloj = moment().format('h:mm:ss a');
+
+      $('#reloj').html('<p><strong>' + reloj + '</strong></p>');
+    }, 1000);
+  }
+
+  // Validación de formulario
+  if (window.location.href.indexOf('contact') > -1) {
+    $("form input[name='date']").datepicker({
+      dateFormat: 'dd-mm-yyyy',
+    });
+    $.validate({
+      lang: 'es',
+      errorMessagePosition: 'top',
+      scrollToTopOnError: true,
+    });
+  }
 });
