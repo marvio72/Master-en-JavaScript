@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto con JavaScript_Reloj</title>
+    <!-- JQuery -->
+
+    <!-- <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.theme.min.css" /> -->
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href="/css/red.css" />
+  </head>
+  <body>
+    <div id="selector-theme">
+      <div id="to-green"></div>
+      <div id="to-red"></div>
+      <div id="to-blue"></div>
+    </div>
+    <section id="global">
+      <!-- Cabecera -->
+      <header>
+        <div id="logo">
+          <h1>Proyecto JS</h1>
+        </div>
+        <div class="clearfix"></div>
+        <navbar id="menu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reloj.html">Reloj</a></li>
+            <li><a href="about.html">Sobre mi</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </navbar>
+      </header>
+
+      <!-- Contenido -->
+      <section id="content">
+        <div id="box">
+          <!-- Cargar Reloj-->
+          <h2>Reloj</h2>
+          <div id="reloj">
+            <!-- Reloj -->
+          </div>
+        </div>
+        <aside id="sidebar">
+          <div id="about">
+            <h4><span>¿Quién soy?</span></h4>
+            <img src="img/caracol.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod
+              id porttitor in, luctus sed justo.
+            </p>
+          </div>
+          <div id="login">
+            <h4>
+              <span>Identificate</span>
+              <form action="#">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="form_name" />
+                <label for="email">Correo</label>
+                <input type="email" name="email" id="form_email" />
+                <label for="name">Password</label>
+                <input type="password" name="password" id="form_password" />
+                <input type="submit" value="Entrar" />
+              </form>
+            </h4>
+          </div>
+        </aside>
+        <div class="clearfix"></div>
+      </section>
+    </section>
+    <footer>
+      Master en JavaScript con Victor Roblez &copy; 2021
+      <a href="#" class="subir">Arriba</a>
+    </footer>
+  </body>
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.13.0/jquery-ui.min.js"></script>
+  <!-- Moment JS -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es-mx.min.js"
+    integrity="sha512-Qy4cmZ6v7vnVEc0cn/BIj9q15eB98do4hMvu8xtc/H+v+YYpdpDrB35flHS3NPLbZUpe1npSYY/u+Gi3UB61vw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <!-- Mis scripts -->
+  <script type="text/JavaScript" src="js/main.js"></script>
+</html>
