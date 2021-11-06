@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto con JavaScript</title>
+    <title>Proyecto con JavaScript_Sobre Mi</title>
     <!-- JQuery -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.theme.min.css" />
+    <script type="text/javascript" src="js/jquery-ui-1.13.0/jquery-ui.min.js"></script>
     <!-- Estilos CSS -->
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
     <link id="theme" rel="stylesheet" type="text/css" href="/css/red.css" />
-    <!-- Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
+
+    <!-- Mis scripts -->
+    <script type="text/JavaScript" src="js/main.js"></script>
   </head>
   <body>
     <div id="selector-theme">
@@ -35,18 +40,16 @@
           </ul>
         </navbar>
       </header>
-      <!-- Slider -->
-      <div id="slider">
-        <div class="bxslider">
-          <div><img src="img/hojas.jpg" title="Hojas" /></div>
-          <div><img src="img/rojo.jpg" title="Rojo" /></div>
-          <div><img src="img/cielo.jpg" title="Azul cielo" /></div>
-        </div>
-      </div>
+
       <!-- Contenido -->
       <section id="content">
-        <div id="posts">
-          <!-- Cargar posts desde json -->
+        <div id="box">
+          <!-- Cargar box desde acordeon -->
+          <h2>Sobre mi</h2>
+          <div id="acordeon">
+            <!-- Contenido de Json Acordeon -->
+            </div>
+          </div>
         </div>
         <aside id="sidebar">
           <div id="about">
@@ -77,26 +80,7 @@
     </section>
     <footer>
       Master en JavaScript con Victor Roblez &copy; 2021
-      <a href="#" class="subir">Arriba</a>
+      <a href="#" class="subir">Ir arriba</a>
     </footer>
   </body>
-  <!-- JQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!-- Slider -->
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  <!-- Moment JS -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
-    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es-mx.min.js"
-    integrity="sha512-Qy4cmZ6v7vnVEc0cn/BIj9q15eB98do4hMvu8xtc/H+v+YYpdpDrB35flHS3NPLbZUpe1npSYY/u+Gi3UB61vw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <!-- Mis scripts -->
-  <script type="text/JavaScript" src="js/main.js"></script>
 </html>

@@ -8,81 +8,83 @@ $(document).ready(function () {
   }
 
   // Slider
-  $('.bxslider').bxSlider({
-    mode: 'fade',
-    captions: true,
-    slideWidth: 1200,
-    pager: false,
-  });
+  if (window.location.href.indexOf('index') > -1) {
+    $('.bxslider').bxSlider({
+      mode: 'fade',
+      captions: true,
+      slideWidth: 1200,
+      pager: false,
+    });
+  }
 
   // Posts
+  if (window.location.href.indexOf('index') > -1) {
+    let posts = [
+      {
+        title: 'Prueba de titulo 1',
+        //   date: moment().format('MMMM Do YYYY'),
+        date:
+          'Publicado el día: ' +
+          moment().date() +
+          ' de ' +
+          moment().format('MMMM') +
+          ' del ' +
+          moment().format('YYYY'),
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo. Nullam et ante a arcu aliquam congue. Proin sed hendrerit diam. Sed rhoncus, elit non volutpat viverra, velit leo sodales turpis, quis tincidunt dui tortor eu purus. Donec augue est, aliquet eu libero nec, vehicula fermentum enim. Aliquam vel turpis dignissim nisi aliquet dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend efficitur lorem sit amet pulvinar.',
+      },
+      {
+        title: 'Prueba de titulo 2',
+        date:
+          'Publicado el día: ' +
+          moment().date() +
+          ' de ' +
+          moment().format('MMMM') +
+          ' del ' +
+          moment().format('YYYY'),
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo. Nullam et ante a arcu aliquam congue. Proin sed hendrerit diam. Sed rhoncus, elit non volutpat viverra, velit leo sodales turpis, quis tincidunt dui tortor eu purus. Donec augue est, aliquet eu libero nec, vehicula fermentum enim. Aliquam vel turpis dignissim nisi aliquet dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend efficitur lorem sit amet pulvinar.',
+      },
+      {
+        title: 'Prueba de titulo 3',
+        date:
+          'Publicado el día: ' +
+          moment().date() +
+          ' de ' +
+          moment().format('MMMM') +
+          ' del ' +
+          moment().format('YYYY'),
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo. Nullam et ante a arcu aliquam congue. Proin sed hendrerit diam. Sed rhoncus, elit non volutpat viverra, velit leo sodales turpis, quis tincidunt dui tortor eu purus. Donec augue est, aliquet eu libero nec, vehicula fermentum enim. Aliquam vel turpis dignissim nisi aliquet dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend efficitur lorem sit amet pulvinar.',
+      },
+      {
+        title: 'Prueba de titulo 4',
+        date:
+          'Publicado el día: ' +
+          moment().date() +
+          ' de ' +
+          moment().format('MMMM') +
+          ' del ' +
+          moment().format('YYYY'),
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo. Nullam et ante a arcu aliquam congue. Proin sed hendrerit diam. Sed rhoncus, elit non volutpat viverra, velit leo sodales turpis, quis tincidunt dui tortor eu purus. Donec augue est, aliquet eu libero nec, vehicula fermentum enim. Aliquam vel turpis dignissim nisi aliquet dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend efficitur lorem sit amet pulvinar.',
+      },
+      {
+        title: 'Prueba de titulo 5',
+        date:
+          'Publicado el día: ' +
+          moment().date() +
+          ' de ' +
+          moment().format('MMMM') +
+          ' del ' +
+          moment().format('YYYY'),
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo. Nullam et ante a arcu aliquam congue. Proin sed hendrerit diam. Sed rhoncus, elit non volutpat viverra, velit leo sodales turpis, quis tincidunt dui tortor eu purus. Donec augue est, aliquet eu libero nec, vehicula fermentum enim. Aliquam vel turpis dignissim nisi aliquet dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend efficitur lorem sit amet pulvinar.',
+      },
+    ];
 
-  let posts = [
-    {
-      title: 'Prueba de titulo 1',
-      //   date: moment().format('MMMM Do YYYY'),
-      date:
-        'Publicado el día: ' +
-        moment().date() +
-        ' de ' +
-        moment().format('MMMM') +
-        ' del ' +
-        moment().format('YYYY'),
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo. Nullam et ante a arcu aliquam congue. Proin sed hendrerit diam. Sed rhoncus, elit non volutpat viverra, velit leo sodales turpis, quis tincidunt dui tortor eu purus. Donec augue est, aliquet eu libero nec, vehicula fermentum enim. Aliquam vel turpis dignissim nisi aliquet dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend efficitur lorem sit amet pulvinar.',
-    },
-    {
-      title: 'Prueba de titulo 2',
-      date:
-        'Publicado el día: ' +
-        moment().date() +
-        ' de ' +
-        moment().format('MMMM') +
-        ' del ' +
-        moment().format('YYYY'),
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo. Nullam et ante a arcu aliquam congue. Proin sed hendrerit diam. Sed rhoncus, elit non volutpat viverra, velit leo sodales turpis, quis tincidunt dui tortor eu purus. Donec augue est, aliquet eu libero nec, vehicula fermentum enim. Aliquam vel turpis dignissim nisi aliquet dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend efficitur lorem sit amet pulvinar.',
-    },
-    {
-      title: 'Prueba de titulo 3',
-      date:
-        'Publicado el día: ' +
-        moment().date() +
-        ' de ' +
-        moment().format('MMMM') +
-        ' del ' +
-        moment().format('YYYY'),
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo. Nullam et ante a arcu aliquam congue. Proin sed hendrerit diam. Sed rhoncus, elit non volutpat viverra, velit leo sodales turpis, quis tincidunt dui tortor eu purus. Donec augue est, aliquet eu libero nec, vehicula fermentum enim. Aliquam vel turpis dignissim nisi aliquet dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend efficitur lorem sit amet pulvinar.',
-    },
-    {
-      title: 'Prueba de titulo 4',
-      date:
-        'Publicado el día: ' +
-        moment().date() +
-        ' de ' +
-        moment().format('MMMM') +
-        ' del ' +
-        moment().format('YYYY'),
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo. Nullam et ante a arcu aliquam congue. Proin sed hendrerit diam. Sed rhoncus, elit non volutpat viverra, velit leo sodales turpis, quis tincidunt dui tortor eu purus. Donec augue est, aliquet eu libero nec, vehicula fermentum enim. Aliquam vel turpis dignissim nisi aliquet dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend efficitur lorem sit amet pulvinar.',
-    },
-    {
-      title: 'Prueba de titulo 5',
-      date:
-        'Publicado el día: ' +
-        moment().date() +
-        ' de ' +
-        moment().format('MMMM') +
-        ' del ' +
-        moment().format('YYYY'),
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo. Nullam et ante a arcu aliquam congue. Proin sed hendrerit diam. Sed rhoncus, elit non volutpat viverra, velit leo sodales turpis, quis tincidunt dui tortor eu purus. Donec augue est, aliquet eu libero nec, vehicula fermentum enim. Aliquam vel turpis dignissim nisi aliquet dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend efficitur lorem sit amet pulvinar.',
-    },
-  ];
-
-  posts.forEach((item, index) => {
-    let post = `
+    posts.forEach((item, index) => {
+      let post = `
      <article class="post">
         <h2>${item.title}</h2>
         <span class="date">${item.date}</span>
@@ -90,8 +92,9 @@ $(document).ready(function () {
         <a href="#" class="button-more">Leer más</a>
      </article>
      `;
-    $('#posts').append(post);
-  });
+      $('#posts').append(post);
+    });
+  }
 
   // Selector de tema
   let theme = $('#theme');
@@ -139,5 +142,43 @@ $(document).ready(function () {
       localStorage.removeItem('usuario');
       location.reload();
     });
+  }
+
+  // Acordeon
+  if (window.location.href.indexOf('about') > -1) {
+    let box = [
+      {
+        title: '¿Quienes somos?',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo.',
+      },
+      {
+        title: '¿Por qué somos el número 1?',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo.',
+      },
+      {
+        title: '¿Que nos respalda?',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo.',
+      },
+      {
+        title: '¿Juntos hacemos la fuerza?',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna magna, euismod id porttitor in, luctus sed justo.',
+      },
+    ];
+
+    box.forEach((element) => {
+      let boxes = `
+       <h3>${element.title}</h3>
+            <div>
+              <p>
+                ${element.content}
+              </p>
+      `;
+      $('#acordeon').append(boxes);
+    });
+    $('#acordeon').accordion();
   }
 });

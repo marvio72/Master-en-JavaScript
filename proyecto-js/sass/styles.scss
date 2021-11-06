@@ -78,9 +78,10 @@
   padding: 7px;
 }
 
-.post h2 {
+h2 {
   font-size: 30px;
   color: #333;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .date {
@@ -223,4 +224,14 @@ footer {
   display: block;
   margin-top: 10px;
   text-align: center;
+}
+
+#box {
+  width: 60%;
+  float: left;
+  margin-top: 40px;
+}
+
+#acordeon {
+  margin-top: 20px;
 }
