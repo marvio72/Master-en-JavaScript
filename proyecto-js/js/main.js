@@ -194,7 +194,7 @@ $(document).ready(function () {
   // Validación de formulario
   if (window.location.href.indexOf('contact') > -1) {
     $("form input[name='date']").datepicker({
-      dateFormat: 'dd-mm-yyyy',
+      dateFormat: 'dd-mm-yy',
     });
     $.validate({
       lang: 'es',

@@ -244,7 +244,7 @@ footer {
   font-family: Helvetica, Arial;
 }
 
-#contacto select {
+#form_contact select {
   width: 30%;
   padding: 5px;
   display: block;
@@ -252,7 +252,7 @@ footer {
   margin-bottom: 5px;
 }
 
-#contacto label {
+#form_contact label {
   font-size: 20px;
   font-weight: normal;
   display: block;

@@ -44,29 +44,33 @@
           <!-- Cargar Formulario-->
           <h2>
             Contacto
-            <form action="#" method="POST" id="contacto">
-              <label for="nombre">Nombre</label>
-              <input type="text" name="nombre" data-validation="alphanumeric" />
-              <label for="apellidos">Apellidos</label>
-              <input type="text" name="apellidos" data-validation="alphanumeric" />
-              <label for="email">Email</label>
+            <form action="" method="POST" id="form_contact">
+              <label for="name">Nombre</label>
+              <input type="text" name="name" data-validation="alphanumeric" />
+
+              <label for="surname">Apellidos</label>
+              <input type="text" name="surname" data-validation="alphanumeric" />
+
+              <label>Email</label>
               <input type="email" name="email" data-validation="email" />
-              <label for="sexo">Sexo</label>
-              <select name="sexo" id="sexo" data-validation="required">
-                <option value="men">Masculino</option>
-                <option value="woman">Femenino</option>
+
+              <label for="sex">Sexo</label>
+              <select name="sex" data-validation="required">
+                <option value="men">Hombre</option>
+                <option value="woman">Mujer</option>
               </select>
-              <label for="Fecha">Fecha de nacimiento</label>
+
+              <label for="date">Fecha de nacimiendo</label>
               <input
-                type="date"
+                type="text"
                 name="date"
-                id="fecha"
                 data-validation="date"
                 data-validation-format="dd-mm-yyyy"
               />
 
-              <label for="Edad">Edad</label>
-              <input type="number" name="edad" id="edad" min="1" data-validation="number" />
+              <label for="years">Edad</label>
+              <input type="number" name="years" data-validation="number" />
+
               <input type="submit" value="Enviar" />
             </form>
           </h2>
