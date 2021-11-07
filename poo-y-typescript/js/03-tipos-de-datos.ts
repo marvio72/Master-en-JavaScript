@@ -1,5 +1,7 @@
-// string
-let cadena: string = 'Marco Ruvalcaba';
+// multiple tipo de datos, con el simbolo de tubo podemos agregar varios tipos de datos.
+let cadena: string | number = 'Marco Ruvalcaba';
+
+cadena = 15;
 
 // number
 let numero: number = 12;

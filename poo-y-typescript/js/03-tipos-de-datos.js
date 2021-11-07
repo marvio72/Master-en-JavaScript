@@ -1,5 +1,6 @@
-// string
+// multiple tipo de datos, con el simbolo de tubo podemos agregar varios tipos de datos.
 var cadena = 'Marco Ruvalcaba';
+cadena = 15;
 // number
 var numero = 12;
 // booleano
