@@ -13,4 +13,14 @@ cualquiera = 77;
 // Arrays
 var lenguajes = ['PHP', 'JS', 'CSS'];
 var years = [12, 13, 14];
+// let vs var
+// Var es una variable global, mientras que let es una variable que corresponde al bloque en donde se esta ejecutando.
+var num1 = 10;
+var num2 = 12;
+if (num1 == 10) {
+    var num1_1 = 44;
+    var num2_1 = 55;
+    console.log(num1_1, num2_1);
+}
+console.log(num1, num2);
 console.log(cadena, numero, verdadero_falso, cualquiera, lenguajes, years, caracteres);
