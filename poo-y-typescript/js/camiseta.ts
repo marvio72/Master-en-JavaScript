@@ -1,6 +1,11 @@
+interface CamisetaBase {
+  setColor(color);
+  getColor();
+}
+
 // Con propiedades privadas
 // export class Playeras {
-class Playeras {
+class Camiseta implements CamisetaBase {
   // Propiedades (caracteristicas del objeto)
   private color: string;
   private modelo: string;
@@ -33,8 +38,8 @@ class Playeras {
   }
 }
 
-// let playera = new Playeras('rojo', 'manga corta', 'Fila', 'S', 14);
-// playera.setColor('Azul');
-// playera.setModelo('Manga Corta');
+let camiseta = new Camiseta('rojo', 'manga corta', 'Fila', 'S', 14);
+camiseta.setColor('Azul');
+camiseta.setModelo('Manga Corta');
 
-// console.log(playera);
+console.log(camiseta);

@@ -1,30 +1,30 @@
 // Con propiedades privadas
 // export class Playeras {
-var Playeras = /** @class */ (function () {
+var Camiseta = /** @class */ (function () {
     // Métodos (funciones o acciones del objeto);
     //Constructor
-    function Playeras(color, modelo, marca, talla, precio) {
+    function Camiseta(color, modelo, marca, talla, precio) {
         this.color = color;
         this.modelo = modelo;
         this.marca = marca;
         this.talla = talla;
         this.precio = precio;
     }
-    Playeras.prototype.setColor = function (color) {
+    Camiseta.prototype.setColor = function (color) {
         this.color = color;
     };
-    Playeras.prototype.setModelo = function (modelo) {
+    Camiseta.prototype.setModelo = function (modelo) {
         this.modelo = modelo;
     };
-    Playeras.prototype.getColor = function () {
+    Camiseta.prototype.getColor = function () {
         return this.color;
     };
-    Playeras.prototype.getModelo = function () {
+    Camiseta.prototype.getModelo = function () {
         return this.modelo;
     };
-    return Playeras;
+    return Camiseta;
 }());
-// let playera = new Playeras('rojo', 'manga corta', 'Fila', 'S', 14);
-// playera.setColor('Azul');
-// playera.setModelo('Manga Corta');
-// console.log(playera);
+var camiseta = new Camiseta('rojo', 'manga corta', 'Fila', 'S', 14);
+camiseta.setColor('Azul');
+camiseta.setModelo('Manga Corta');
+console.log(camiseta);
