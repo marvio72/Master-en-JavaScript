@@ -38,8 +38,24 @@ class Camiseta implements CamisetaBase {
   }
 }
 
+// Clase hija
+class Sudadera extends Camiseta {
+  public capucha: boolean;
+
+  setCapucha(capucha: boolean) {
+    this.capucha = capucha;
+  }
+  getCapucha(): boolean {
+    return this.capucha;
+  }
+}
+
 let camiseta = new Camiseta('rojo', 'manga corta', 'Fila', 'S', 14);
-camiseta.setColor('Azul');
-camiseta.setModelo('Manga Corta');
+// camiseta.setColor('Azul');
+// camiseta.setModelo('Manga Corta');
 
 console.log(camiseta);
+
+let sudadera_nike = new Sudadera('Negra', 'Manga Larga', 'Adidas', 'M', 20);
+sudadera_nike.setCapucha(true);
+console.log(sudadera_nike);
