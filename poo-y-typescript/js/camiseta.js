@@ -1,21 +1,14 @@
-// Clase )molde del objeto)
-var Camiseta = /** @class */ (function () {
-    function Camiseta() {
-    }
-    return Camiseta;
-}());
-var camiseta = new Camiseta();
-camiseta.color = 'Rojo';
-camiseta.modelo = 'Manga Larga';
-camiseta.marca = 'Nike';
-camiseta.talla = 'XL';
-camiseta.precio = '10';
-console.log(camiseta);
 // Con propiedades privadas
 var Playeras = /** @class */ (function () {
-    function Playeras() {
-    }
     // Métodos (funciones o acciones del objeto);
+    //Constructor
+    function Playeras(color, modelo, marca, talla, precio) {
+        this.color = color;
+        this.modelo = modelo;
+        this.marca = marca;
+        this.talla = talla;
+        this.precio = precio;
+    }
     Playeras.prototype.setColor = function (color) {
         this.color = color;
     };
@@ -30,7 +23,7 @@ var Playeras = /** @class */ (function () {
     };
     return Playeras;
 }());
-var playera = new Playeras();
+var playera = new Playeras('rojo', 'manga corta', 'Fila', 'S', 14);
 playera.setColor('Azul');
 playera.setModelo('Manga Corta');
 console.log(playera);

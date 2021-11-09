@@ -1,25 +1,3 @@
-// Clase )molde del objeto)
-class Camiseta {
-  // Propiedades (caracteristicas del objeto)
-  public color: string;
-  public modelo: string;
-  public marca: string;
-  public talla: string;
-  public precio: string;
-
-  // Métodos (funciones o acciones del objeto);
-}
-
-let camiseta = new Camiseta();
-
-camiseta.color = 'Rojo';
-camiseta.modelo = 'Manga Larga';
-camiseta.marca = 'Nike';
-camiseta.talla = 'XL';
-camiseta.precio = '10';
-
-console.log(camiseta);
-
 // Con propiedades privadas
 class Playeras {
   // Propiedades (caracteristicas del objeto)
@@ -30,6 +8,15 @@ class Playeras {
   private precio: number;
 
   // Métodos (funciones o acciones del objeto);
+  //Constructor
+  constructor(color, modelo, marca, talla, precio) {
+    this.color = color;
+    this.modelo = modelo;
+    this.marca = marca;
+    this.talla = talla;
+    this.precio = precio;
+  }
+
   public setColor(color) {
     this.color = color;
   }
@@ -45,7 +32,7 @@ class Playeras {
   }
 }
 
-let playera = new Playeras();
+let playera = new Playeras('rojo', 'manga corta', 'Fila', 'S', 14);
 playera.setColor('Azul');
 playera.setModelo('Manga Corta');
 
