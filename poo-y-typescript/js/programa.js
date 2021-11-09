@@ -51,3 +51,19 @@ editor.setNombre('FinalCut');
 editor.setVersion(10);
 editor.setTimeline(120);
 console.log(editor.getAllData());
+// Logica del formulario:
+var programas = [];
+function guardar() {
+    var nombre = document.getElementById('nombre').value.toString();
+    var programa = new Programa();
+    programa.setNombre(nombre);
+    programa.setVersion(1);
+    programas.push(programa);
+    var list = '';
+    for (var i = 0; i < programas.length; i++) {
+        list = list + ("<li>" + programas[i].getNombre() + "</li>");
+    }
+    var listado = document.getElementById('listado');
+    listado.innerHTML = list;
+    document.getElementById('nombre').value = '';
+}
