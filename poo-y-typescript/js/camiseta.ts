@@ -1,4 +1,5 @@
 // Con propiedades privadas
+// export class Playeras {
 class Playeras {
   // Propiedades (caracteristicas del objeto)
   private color: string;
@@ -32,8 +33,8 @@ class Playeras {
   }
 }
 
-let playera = new Playeras('rojo', 'manga corta', 'Fila', 'S', 14);
-playera.setColor('Azul');
-playera.setModelo('Manga Corta');
+// let playera = new Playeras('rojo', 'manga corta', 'Fila', 'S', 14);
+// playera.setColor('Azul');
+// playera.setModelo('Manga Corta');
 
-console.log(playera);
+// console.log(playera);

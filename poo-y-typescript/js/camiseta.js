@@ -1,4 +1,5 @@
 // Con propiedades privadas
+// export class Playeras {
 var Playeras = /** @class */ (function () {
     // Métodos (funciones o acciones del objeto);
     //Constructor
@@ -23,7 +24,7 @@ var Playeras = /** @class */ (function () {
     };
     return Playeras;
 }());
-var playera = new Playeras('rojo', 'manga corta', 'Fila', 'S', 14);
-playera.setColor('Azul');
-playera.setModelo('Manga Corta');
-console.log(playera);
+// let playera = new Playeras('rojo', 'manga corta', 'Fila', 'S', 14);
+// playera.setColor('Azul');
+// playera.setModelo('Manga Corta');
+// console.log(playera);
