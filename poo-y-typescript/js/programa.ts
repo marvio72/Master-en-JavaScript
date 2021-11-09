@@ -1,3 +1,11 @@
+function arranque(lanzar: string) {
+  return function (target: Function) {
+    target.prototype.lanzamiento = function (): void {
+      alert(lanzar);
+    };
+  };
+}
+@arranque('Lanzamiento del curso de NodeJS y Angular')
 class Programa {
   public nombre: string;
   public version: number;
@@ -34,6 +42,8 @@ class EditorVideo extends Programa {
     return `${this.getNombre()} - ${this.getVersion()} - ${this.getTimeline()}`;
   }
 }
+let programa1 = new Programa();
+programa1.lanzamiento();
 
 let editor = new EditorVideo();
 editor.setNombre('FinalCut');
