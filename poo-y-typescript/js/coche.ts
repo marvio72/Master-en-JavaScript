@@ -1,4 +1,8 @@
-class Coche {
+interface CocheBase {
+  getModelo(): string;
+  getVelocidad(): number;
+}
+class Coche implements CocheBase {
   public color: string;
   public modelo: string;
   public velocidad: number;
