@@ -10,12 +10,12 @@ export class AppComponent {
   public title = 'Master de JavaScript y Angular';
   public descripcion: string;
   public mostrar_videojuegos: boolean = true;
-  public configuracion;
+  public config;
 
   constructor() {
     this.title = Configuracion.titulo;
     this.descripcion = Configuracion.descripcion;
-    this.configuracion = Configuracion;
+    this.config = Configuracion;
   }
 
   ocultarVideojuegos(value: boolean) {
