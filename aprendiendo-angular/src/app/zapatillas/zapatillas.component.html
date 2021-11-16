@@ -2,7 +2,7 @@
 
 <p>Añadir marca</p>
 <p>
-    <input type="text" [(ngModel)]="mi_marca">
+    <input type="text" [(ngModel)]="mi_marca" (blur)="onBlur()">
     <button (click)="getMarca()">Mosrar Marca</button>
     <button (click)="addMarca()">Añadir Marca</button>
 </p>
