@@ -54,4 +54,8 @@ export class ZapatillasComponent implements OnInit {
   onBlur() {
     console.log('Haz salido del input');
   }
+
+  mostrarPalabra() {
+    alert(this.mi_marca);
+  }
 }
