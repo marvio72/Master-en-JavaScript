@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../aprendiendo-angular/src/app/cursos/cursos.component.scss"
+    ],
+    "names": [],
+    "file": "cursos.component.css"
+}

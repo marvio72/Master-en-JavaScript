@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "../aprendiendo-angular/src/assets/zapatillas.scss"
+    ],
+    "names": [],
+    "file": "zapatillas.css"
+}
