@@ -3,4 +3,12 @@
   color: grey;
   font-size: 18px;
 }
+
+.fondoRojo {
+  background: red;
+}
+
+.subrayado {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=styles.css.map */
