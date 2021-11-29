@@ -6,11 +6,14 @@
 }">
   <h1>Bienvenido al {{ title}}!</h1>
   <p>{{descripcion}}</p>
-  <!-- <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
-  <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar</button>
-  <videojuego *ngIf="mostrar_videojuegos"></videojuego> -->
-  <!-- <zapatillas></zapatillas> -->
-  <!-- <cursos></cursos> -->
+
+  <nav>
+    <a [routerLink]="['/']">Home</a>&nbsp;
+    <a [routerLink]="['/zapatillas']">Zapatillas</a>&nbsp;
+    <a [routerLink]="['/videojuego']">Video Juegos</a>&nbsp;
+    <a [routerLink]="['/cursos']">Cursos</a>
+  </nav>
+
 
   <router-outlet></router-outlet>
 </div>
