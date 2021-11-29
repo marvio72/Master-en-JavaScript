@@ -16,7 +16,15 @@ export class CursosComponent implements OnInit {
     this._route.params.subscribe((params: Params) => {
       this.nombre = params['nombre'];
       this.followers = +params['followers'];
-      // console.log(this.nombre);
+
+      // si nombre es igual a ninguno me lleva a la pagina home
+      if (this.nombre == 'ninguno') {
+        this._router.navigate(['/home']);
+      }
     });
+  }
+
+  redirigir() {
+    this._router.navigate(['/zapatillas']);
   }
 }
