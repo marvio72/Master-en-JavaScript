@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProviders } from './app.routing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
+import { ExternoComponent } from './externo/externo.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { HomeComponent } from './home/home.component';
     ZapatillasComponent,
     CursosComponent,
     HomeComponent,
+    ExternoComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     CommonModule,
     routing,
+    HttpClientModule,
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent],
