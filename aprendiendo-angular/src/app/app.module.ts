@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ExternoComponent } from './externo/externo.component';
     CursosComponent,
     HomeComponent,
     ExternoComponent,
+    CalculadoraPipe,
   ],
   imports: [
     BrowserModule,
