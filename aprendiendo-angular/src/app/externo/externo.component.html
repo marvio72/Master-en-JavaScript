@@ -3,6 +3,31 @@
 {{'HOLA MUNDO USANDO ANGULAR' | lowercase}}<br>
 {{4 | calculadora: 2}}
 <hr>
+<div class="container">
+    <h2>Crear usuario</h2>
+    <form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" name="name" id="name" class="form-control" #name="ngModel" [(ngModel)]="new_user.name"
+            required pattern="[a-zA-z ]+">
+        <span *ngIf="name.touched && !name.valid">
+            El nombre no es valido.
+        </span>
+
+        <label for="job" class="form-label">Trabajo</label>
+        <input type="text" name="job" id="job" class="form-control" #job="ngModel" [(ngModel)]="new_user.job" required>
+        <span *ngIf="job.touched && !job.valid">
+            El Trabajo no es valido.
+        </span>
+
+        <input type="submit" value="Guardar usuario" class="btn btn-primary mt-3" [disabled]="!newUser.form.valid">
+    </form>
+    <div *ngIf="usuarioGuardado">
+        <h2>El usuario se ha guardado correctamente</h2>
+        <h3>{{usuarioGuardado.name}}</h3>
+        <h4>{{usuarioGuardado.job}}</h4>
+    </div>
+</div>
+<hr>
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()" />
 <div *ngIf="!user">
     Cargando...
@@ -13,3 +38,5 @@
     <h3>{{user.email}}</h3>
 
 </div>
+
+<hr>
