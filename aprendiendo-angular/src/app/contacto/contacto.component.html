@@ -1,18 +1,33 @@
 <div class="container">
     <h2>Contacto</h2>
-    <form #formContacto="ngForm" (ngSubmit)="onSubmit()">
+    <form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
         <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" name="nombre" class="form-control" #nombre="ngModel" [(ngModel)]="usuario.nombre">
+        <input type="text" name="nombre" class="form-control" #nombre="ngModel" [(ngModel)]="usuario.nombre" required
+            pattern="[a-zA-Z ]+" />
+        <span *ngIf="nombre.touched && !nombre.valid">
+            El nombre es obligatorio
+        </span>
 
         <label for="apellidos" class="form-label">Apellidos</label>
-        <input type="text" name="apellidos" class="form-control" #apellidos="ngModel" [(ngModel)]="usuario.apellidos">
+        <input type="text" name="apellidos" class="form-control" #apellidos="ngModel" [(ngModel)]="usuario.apellidos"
+            required pattern="[a-zA-Z ]+" />
+        <span *ngIf="apellidos.touched && !apellidos.valid">
+            Los apellidos son obligatorios
+        </span>
 
         <label for="email" class="form-label">Email</label>
-        <input type="email" name="email" class="form-control" #email="ngModel" [(ngModel)]="usuario.email">
+        <input type="email" name="email" class="form-control" #email="ngModel" [(ngModel)]="usuario.email" required>
+        <span *ngIf="email.touched && !email.valid">
+            El email no es válido
+        </span>
 
         <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea name="mensaje" class="form-control" #mensaje="ngModel" [(ngModel)]="usuario.mensaje"></textarea>
+        <textarea name="mensaje" class="form-control" #mensaje="ngModel" [(ngModel)]="usuario.mensaje"
+            required></textarea>
+        <span *ngIf="mensaje.touched && !mensaje.valid">
+            El mensaje es obligatorio
+        </span>
 
-        <input type="submit" value="Enviar" class="btn btn-primary mt-3">
+        <input type="submit" value="Enviar" class="btn btn-primary mt-3" [disabled]="!formContacto.form.valid">
     </form>
 </div>

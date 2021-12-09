@@ -15,8 +15,8 @@ export class ContactoComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit() {
-    console.log('Evento submit lanzado!!');
+  onSubmit(form: any) {
     console.log(this.usuario);
+    // form.reset();
   }
 }
