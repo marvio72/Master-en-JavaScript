@@ -3,7 +3,7 @@
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
-// Estructura de la tabla Projects
+// Estructura de la Colección Projects
 let ProjectSchema = Schema({
   name: String,
   description: String,
@@ -13,3 +13,4 @@ let ProjectSchema = Schema({
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);
+// projects --> guarda los documentos en la colección
