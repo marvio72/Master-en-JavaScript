@@ -17,7 +17,14 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
   res.status(200).send('<h1>Pagina de inicio</h1>');
 });
-app.get('/test', (req, res) => {
+// app.get('/test', (req, res) => {
+//   res.status(200).send({
+//     message: 'Hola mundo desde mi API de NodeJS',
+//   });
+app.post('/test/:id', (req, res) => {
+  console.log(req.body.nombre);
+  console.log(req.query.web);
+  console.log(req.params.id);
   res.status(200).send({
     message: 'Hola mundo desde mi API de NodeJS',
   });
