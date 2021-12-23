@@ -1,5 +1,6 @@
 'use strict';
 
+const project = require('../models/project');
 let Project = require('../models/project');
 const { param } = require('../routes/project');
 
@@ -78,6 +79,34 @@ let controller = {
         .status(200)
         .send({ project: projectRemoved, message: `El documento ${projectId} ha sido eliminado` });
     });
+  },
+
+  uploadImage: function (req, res) {
+    let projectId = req.params.id;
+    let fileName = 'Imagen no subida...';
+
+    if (req.files) {
+      let filePath = req.files.image.path;
+      let fileSplit = filePath.split('/');
+      let fileName = fileSplit[1];
+
+      Project.findByIdAndUpdate(
+        projectId,
+        { image: fileName },
+        { new: true },
+        (err, projectUpdated) => {
+          if (err) return res.status(500).send({ message: 'Hubo un error al cargar la imagen' });
+
+          if (!projectUpdated) return res.status(404).send({ message: 'La imagen no existe' });
+
+          return res.status(200).send({ project: projectUpdated });
+        }
+      );
+    } else {
+      return res.status(200).send({
+        message: fileName,
+      });
+    }
   },
 };
 
