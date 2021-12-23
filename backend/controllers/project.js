@@ -67,6 +67,18 @@ let controller = {
       return res.status(200).send({ project: projectUpdated });
     });
   },
+
+  deleteProject: function (req, res) {
+    let projectId = req.params.id;
+
+    Project.findByIdAndRemove(projectId, (err, projectRemoved) => {
+      if (err) return res.status(500).send({ message: 'Error al eliminar el documento' });
+      if (!projectRemoved) return res.status(404).send({ message: 'No existe el documento' });
+      return res
+        .status(200)
+        .send({ project: projectRemoved, message: `El documento ${projectId} ha sido eliminado` });
+    });
+  },
 };
 
 module.exports = controller;
