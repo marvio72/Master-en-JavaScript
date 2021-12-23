@@ -2,6 +2,8 @@
 
 const project = require('../models/project');
 let Project = require('../models/project');
+const fs = require('fs');
+
 const { param } = require('../routes/project');
 
 let controller = {
@@ -87,21 +89,32 @@ let controller = {
 
     if (req.files) {
       let filePath = req.files.image.path;
+      // Saca el nombre de el archivo.
       let fileSplit = filePath.split('/');
       let fileName = fileSplit[1];
+      // Saca la extensión del archivo
+      let extSplit = fileName.split('.');
+      let fileExt = extSplit[1];
 
-      Project.findByIdAndUpdate(
-        projectId,
-        { image: fileName },
-        { new: true },
-        (err, projectUpdated) => {
-          if (err) return res.status(500).send({ message: 'Hubo un error al cargar la imagen' });
+      if (fileExt == 'jpg' || fileExt == 'png' || fileExt == 'jpeg' || fileExt == 'gif') {
+        Project.findByIdAndUpdate(
+          projectId,
+          { image: fileName },
+          { new: true },
+          (err, projectUpdated) => {
+            if (err) return res.status(500).send({ message: 'Hubo un error al cargar la imagen' });
 
-          if (!projectUpdated) return res.status(404).send({ message: 'La imagen no existe' });
+            if (!projectUpdated) return res.status(404).send({ message: 'La imagen no existe' });
 
-          return res.status(200).send({ project: projectUpdated });
-        }
-      );
+            return res.status(200).send({ project: projectUpdated });
+          }
+        );
+      } else {
+        // Si no fue guardado en la base de datos eliminamos el archivo de la carpeta upload
+        fs.unlink(filePath, (err) => {
+          return res.status(500).send({ message: 'La extensión no es válida' });
+        });
+      }
     } else {
       return res.status(200).send({
         message: fileName,
