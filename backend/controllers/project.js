@@ -56,6 +56,17 @@ let controller = {
         return res.status(200).send({ projects });
       });
   },
+
+  updateProject: function (req, res) {
+    let projectId = req.params.id;
+    let update = req.body;
+
+    Project.findByIdAndUpdate(projectId, update, { new: true }, (err, projectUpdated) => {
+      if (err) return res.status(500).send({ message: 'Error en la actualización de datos' });
+      if (!projectUpdated) return res.status(404).send({ message: 'Documento no encontrado' });
+      return res.status(200).send({ project: projectUpdated });
+    });
+  },
 };
 
 module.exports = controller;
