@@ -45,6 +45,17 @@ let controller = {
       return res.status(200).send({ project });
     });
   },
+
+  getProjects: function (req, res) {
+    Project.find({})
+      .sort('-year')
+      .exec((err, projects) => {
+        if (err)
+          return res.status(500).send({ message: 'Error al devolver la lista de documentos' });
+        if (!projects) return res.status(404).send({ message: 'No hay documentos existentes' });
+        return res.status(200).send({ projects });
+      });
+  },
 };
 
 module.exports = controller;
