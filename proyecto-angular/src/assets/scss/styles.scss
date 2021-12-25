@@ -1,3 +1,6 @@
+/*----------------------------------
+  Importar fuentes custom
+  --------------------------------*/
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf");
@@ -13,6 +16,18 @@
   src: url("../fonts/Pushster-Regular.ttf");
 }
 
+/*----------------------------------
+  Estilos Generales
+  --------------------------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
 body {
+  font-family: Roboto, Arial, Helvetica;
+  background: url(../img/pattern.png);
+}
+
+h1 {
   font-family: Pushster, Arial, Helvetica;
 }
