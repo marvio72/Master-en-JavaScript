@@ -1,5 +1,5 @@
 <header>
-  <div class="px-3 py-2 bg-dark text-white">
+  <div class="px-3 py-2 bg-dark">
     <div class="container-fluid">
       <div class="
           d-flex
@@ -12,7 +12,8 @@
             align-items-center
             my-2 my-lg-0
             me-lg-auto
-            text-white text-decoration-none
+            text-link
+            text-decoration-none
           ">
           <i class="bi bi-laptop d-block mx-auto mb-1 display-3 text-center"></i>
         </a>
@@ -26,7 +27,7 @@
             text-small
           ">
           <li>
-            <a [routerLink]="['/sobre-mi']" class="nav-link text-white">
+            <a [routerLink]="['/sobre-mi']" class="nav-link">
               <i class="
                   bi bi-file-person
                   d-block
@@ -39,7 +40,7 @@
             </a>
           </li>
           <li>
-            <a [routerLink]="['/proyectos']" class="nav-link text-white">
+            <a [routerLink]="['/proyectos']" class="nav-link">
               <i class="
                   bi bi-card-checklist
                   d-block
@@ -52,7 +53,7 @@
             </a>
           </li>
           <li>
-            <a [routerLink]="['/crear-proyecto']" class="nav-link text-white">
+            <a [routerLink]="['/crear-proyecto']" class="nav-link">
               <i class="
                   bi bi-node-plus
                   d-block
@@ -65,7 +66,7 @@
             </a>
           </li>
           <li>
-            <a [routerLink]="['/contacto']" class="nav-link text-white">
+            <a [routerLink]="['/contacto']" class="nav-link">
               <i class="
                   bi bi-person-rolodex
                   d-block
@@ -103,7 +104,7 @@
   </section>
 </div>
 
-<footer class="bg-dark">
+<footer class="bg-dark text-primary">
 
   <div class="container 
     d-flex
@@ -114,7 +115,7 @@
     my-4
     border-top">
 
-    <p class="col-md-4 mb-0 text-muted">&copy; 2021 {{ web }}</p>
+    <p class="col-md-4 mb-0">&copy; 2021 {{ web }}</p>
 
     <a href="/" class="
         col-md-4
@@ -126,21 +127,21 @@
         link-dark
         text-decoration-none
       ">
-      <i class="bi bi-laptop d-block mx-auto mb-1 display-4 text-center text-muted"></i>
+      <i class="bi bi-laptop d-block mx-auto mb-1 display-4 text-center text-primary"></i>
     </a>
 
     <ul class="nav col-md-4 justify-content-end">
       <li class="nav-item">
-        <a [routerLink]="['/sobre-mi']" class="nav-link px-2 text-muted">Sobre mi</a>
+        <a [routerLink]="['/sobre-mi']" class="nav-link px-2">Sobre mi</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/proyectos']" class="nav-link px-2 text-muted">Proyectos</a>
+        <a [routerLink]="['/proyectos']" class="nav-link px-2">Proyectos</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/crear-proyecto']" class="nav-link px-2 text-muted">Crear proyecto</a>
+        <a [routerLink]="['/crear-proyecto']" class="nav-link px-2">Crear proyecto</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/contacto']" class="nav-link px-2 text-muted">Contacto</a>
+        <a [routerLink]="['/contacto']" class="nav-link px-2">Contacto</a>
       </li>
     </ul>
 
