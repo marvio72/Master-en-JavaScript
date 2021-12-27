@@ -27,20 +27,13 @@
             text-small
           ">
           <li>
-            <a [routerLink]="['/sobre-mi']" class="nav-link">
-              <i class="
-                  bi bi-file-person
-                  d-block
-                  mx-auto
-                  mb-1
-                  display-6
-                  text-center
-                "></i>
+            <a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']" class="nav-link">
+              <i class=" bi bi-file-person d-block mx-auto mb-1 display-6 text-center "></i>
               Sobre mi
             </a>
           </li>
           <li>
-            <a [routerLink]="['/proyectos']" class="nav-link">
+            <a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']" class="nav-link">
               <i class="
                   bi bi-card-checklist
                   d-block
@@ -53,7 +46,7 @@
             </a>
           </li>
           <li>
-            <a [routerLink]="['/crear-proyecto']" class="nav-link">
+            <a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']" class="nav-link">
               <i class="
                   bi bi-node-plus
                   d-block
@@ -66,7 +59,7 @@
             </a>
           </li>
           <li>
-            <a [routerLink]="['/contacto']" class="nav-link">
+            <a [routerLink]="['/contacto']" [routerLinkActive]="['actived']" class="nav-link">
               <i class="
                   bi bi-person-rolodex
                   d-block
@@ -132,16 +125,16 @@
 
     <ul class="nav col-md-4 justify-content-end">
       <li class="nav-item">
-        <a [routerLink]="['/sobre-mi']" class="nav-link px-2">Sobre mi</a>
+        <a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']" class="nav-link px-2">Sobre mi</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/proyectos']" class="nav-link px-2">Proyectos</a>
+        <a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']" class="nav-link px-2">Proyectos</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/crear-proyecto']" class="nav-link px-2">Crear proyecto</a>
+        <a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']" class="nav-link px-2">Crear proyecto</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/contacto']" class="nav-link px-2">Contacto</a>
+        <a [routerLink]="['/contacto']" [routerLinkActive]="['actived']" class="nav-link px-2">Contacto</a>
       </li>
     </ul>
 

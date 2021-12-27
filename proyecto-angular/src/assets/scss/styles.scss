@@ -35,7 +35,21 @@ h1 {
 /*----------------------------------
   Estilos headers
   --------------------------------*/
+.nav .nav-link {
+  color: white;
+}
 
-footer {
-  color: white !important;
+.nav .nav-link:hover {
+  color: grey;
+}
+
+.nav .actived {
+  color: gray;
+}
+
+/*----------------------------------
+  Estilo Contenido
+  --------------------------------*/
+#content {
+  min-height: 360px;
 }
