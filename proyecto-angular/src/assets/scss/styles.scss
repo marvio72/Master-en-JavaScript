@@ -35,6 +35,14 @@ h1 {
 /*----------------------------------
   Estilos headers
   --------------------------------*/
+header .bi-laptop {
+  color: white !important;
+}
+
+header .bi-laptop:hover {
+  color: grey !important;
+}
+
 .nav .nav-link {
   color: white;
 }
@@ -52,4 +60,15 @@ h1 {
   --------------------------------*/
 #content {
   min-height: 360px;
+}
+
+/*----------------------------------
+  Estilos footer
+  --------------------------------*/
+footer .bi-laptop {
+  color: white;
+}
+
+footer .bi-laptop:hover {
+  color: gray;
 }
