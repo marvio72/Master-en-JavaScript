@@ -17,6 +17,7 @@ export class CreateComponent implements OnInit {
   public project: Project;
 
   constructor(_projectService: ProjectService) {
+    // Sacar el año con la fecha actual
     const actualYear = new Date();
     this.title = 'Crear proyecto';
     this.project = new Project(
