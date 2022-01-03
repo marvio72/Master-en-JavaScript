@@ -15,8 +15,10 @@ export class CreateComponent implements OnInit {
   public title: string;
   //Propiedad que modificara el formulario
   public project: Project;
+  //Variable para el status de la alta en la base de datos.
+  public status: string;
 
-  constructor(_projectService: ProjectService) {
+  constructor(private _projectService: ProjectService) {
     // Sacar el año con la fecha actual
     const actualYear = new Date();
     this.title = 'Crear proyecto';
@@ -34,6 +36,19 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(form: any) {
-    console.log(this.project);
+    this._projectService.saveProject(this.project).subscribe(
+      (response) => {
+        console.log(response);
+        if (response.project) {
+          this.status = 'success';
+          form.reset();
+        } else {
+          this.status = 'failde';
+        }
+      },
+      (error) => {
+        console.log(<any>error);
+      }
+    );
   }
 }

@@ -2,6 +2,15 @@
 
 <hr>
 
+
+<div class="message success bg-success p-3 mb-2" *ngIf="status == 'success'">
+    El proyecto se ha creado correctamente, puedes <a class="text-light" href="#">verlo aquí</a>
+</div>
+
+<div class="message failed bg-danger p-3 text-light mb-2" *ngIf="status == 'failed'">
+    El proyecto NO SE HA PODIDO CREAR
+</div>
+
 <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
     <div class="mb-3">
         <label for="name" class="form-label">Nombre</label>
