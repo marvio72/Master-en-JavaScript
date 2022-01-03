@@ -50,7 +50,8 @@
     </div>
     <div class="mb-3">
         <label for="image" class="form-label">Imagen del proyecto</label>
-        <input type="file" class="form-control mb-1" id="image" name="image" placeholder="Subir imagen">
+        <input type="file" class="form-control mb-1" id="image" name="image" placeholder="Subir imagen"
+            (change)="fileChangeEvent($event)">
     </div>
 
     <button type="submit" class="btn btn-primary" [disabled]="!projectForm.form.valid">Enviar</button>
