@@ -16,6 +16,7 @@ export class ProjectService {
     return 'Probando el servicio de Angular';
   }
 
+  // Metodo para agregar documentos a la base de datos.
   saveProject(project: Project): Observable<any> {
     let params = JSON.stringify(project);
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
@@ -23,5 +24,12 @@ export class ProjectService {
     return this._http.post(this.url + 'save-project', params, {
       headers: headers,
     });
+  }
+
+  // Metodo para mostrar información de la base de datos.
+  getProject(): Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+    return this._http.get(this.url + 'projects', { headers: headers });
   }
 }
